@@ -12,9 +12,12 @@
 	<label for="ag">please type your age :</label>    
     <input type="text" name="age">      <!--ici on recup avec GET -->
 	
-    <label for="genr">man or women?:</label>
-	<input type='text' name='genre'>
+    <label for="man">man</label>
+	<input type='radio' id="man" name='genre' value="man">
     
+    <label for="women">women</label>
+	<input type='radio' id="women" name='genre' value="women">
+
     <input type="submit" name="submit" value="Greet me now">
 </form>
 
