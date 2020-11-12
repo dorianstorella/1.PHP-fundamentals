@@ -17,16 +17,16 @@
 
     <label for="lang">do you speak english :</label>
     <label for="yes">yes</label>
-    <input type="radio" id="yLang" name="lang" value="yes">
+    <input type="radio"  name="lang" value="yes">
     <label for="no">no</label>
-    <input type="radio" id="nLang" name="lang" value="no">
+    <input type="radio"  name="lang" value="no">
     
     <br>
     <label for="man">man</label>
-	<input type='radio' id="man" name='genre' value="man">
+	<input type='radio'  name='genre' value="man">
     
     <label for="women">women</label>
-	<input type='radio' id="women" name='genre' value="women">
+	<input type='radio'  name='genre' value="women">
 
     <input type="submit" name="submit" value="Greet me now">
 </form>
