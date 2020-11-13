@@ -46,14 +46,14 @@
     } else {
        $name='';
     }*/
-    $age=$_GET['age']?? 'none' . ' ';
+   // $age=$_GET['age']?? 'none' . ' ';
     //echo $age;
-    $genre=$_GET['genre']??'none';
+    //$genre=$_GET['genre']??'none';
     //echo $genre;
-    $name=$_GET['firstname']??' none';
+   // $name=$_GET['firstname']??' none';
     //echo $name;
     
-    switch($age . $genre){
+    /*switch($age . $genre){
         
         case $age >=21 AND $age <= 40 AND $genre == 'women' :
             echo 'welcome to the team' . ' ' . $name;
@@ -79,10 +79,22 @@
             
             echo 'enter your criteria';
         break;
-    } 
-    
+    } */
+    //if ($age >= 21 AND $age <=40 AND $genre == 'women');
+    //echo 'welcome to the team' .' '. $name ;
+    if (isset($_GET['firstname'])){$name=$_GET['firstname'];}
+    $say='sorry you don\'t have criteria' ;
+   
+    if (isset($_GET['age'])){  //ici nous pouvons declarer sans devoir sans rajouter une valeur de base comme on les utilise juste apres 
+        if($_GET['age'] >=21 AND  ($_GET['age']) <= 40 AND ($_GET['genre']) === 'women'){
+            $say="welcome to the team" . " " . $name;
+         } 
+            echo $say;
+        
+       
+    }
     
   
-    ?>
+   ?>
 </body>
 </html>
