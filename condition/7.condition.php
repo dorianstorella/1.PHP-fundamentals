@@ -82,10 +82,12 @@
     } */
     //if ($age >= 21 AND $age <=40 AND $genre == 'women');
     //echo 'welcome to the team' .' '. $name ;
-    if (isset($_GET['firstname'])){$name=$_GET['firstname'];}
+    //$name =$_GET{'firstname'};
+   
+    if (isset($_GET['firstname'])){$name=$_GET['firstname'];} 
     $say='sorry you don\'t have criteria' ;
    
-    if (isset($_GET['age'])){  //ici nous pouvons declarer sans devoir sans rajouter une valeur de base comme on les utilise juste apres 
+    if (isset($_GET['age'])){  //nous avons besoin de isset pour qu il reagrde si true false ainsi on n a pas d erreur avant d entre les donnée
         if($_GET['age'] >=21 AND  ($_GET['age']) <= 40 AND ($_GET['genre']) === 'women'){
             $say="welcome to the team" . " " . $name;
          } 
