@@ -28,7 +28,7 @@
     
 
     <?php
-    if (isset($_GET['age'])){
+    /*if (isset($_GET['age'])){
     $age=$_GET['age'];
     } else { 
         $age='';
@@ -45,26 +45,44 @@
        $name=$_GET['firstname'];
     } else {
        $name='';
-    }
-  
-
-    if ( $age >= 21 AND $age <=40 AND $genre === 'women' ){
-    echo 'welcome to the team' .' '. $name;
-    }
-
-    if ( $age >=21 AND $age <=40 AND $genre ==='male'  ){
-    echo "sorry you don't have criteria" .' '. $name;
-    }
+    }*/
+    $age=$_GET['age']?? 'none' . ' ';
+    //echo $age;
+    $genre=$_GET['genre']??'none';
+    //echo $genre;
+    $name=$_GET['firstname']??' none';
+    //echo $name;
     
-    if ( $age < 21 AND $age <=40 AND $genre ==='women'  ){
-        echo "sorry you don't have criteria" .' '. $name;
-    }
-
-    if ( $age >= 21 AND $age >40 AND $genre ==='women'  ){
-            echo "sorry you don't have criteria" .' '. $name;
-    }
-
-
-   ?>
+    switch($age . $genre){
+        
+        case $age >=21 AND $age <= 40 AND $genre == 'women' :
+            echo 'welcome to the team' . ' ' . $name;
+        break;
+        
+        
+        case $age >=21 AND $age >= 40 AND $genre == 'women' :
+            echo "sorry you don't have criteria" . ' ' . $name;
+        break;
+        
+        
+        case $age <=21 AND $age <= 40 AND $genre == 'women';
+            echo "sorry you don't have criteria" . ' ' . $name;
+        break;
+        
+        
+        case $age >=21 AND $age <= 40 AND $genre !== 'women';
+            echo "sorry you don't have criteria" . ' ' . $name;
+        break;
+        
+        
+        default :
+            
+            echo 'enter your criteria';
+        break;
+    } 
+    
+    
+  
+    ?>
 </body>
 </html>
