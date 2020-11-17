@@ -24,7 +24,7 @@ $mother = array(
     'firstname'=>'Isabelle',
     'name'=>'storella',
     'favourite_season'=> 'spring', // <= printemps && autonne => autumn
-    'hobbies' => array( 
+    'hobbies' => array(              // imbrique une array dans une autre
         '1 hobbies'=>'manucure',
         '2 hobbies'=>'restaurant' , 
         '3 hobbies'=>'game' 
