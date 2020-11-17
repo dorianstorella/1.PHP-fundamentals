@@ -33,4 +33,8 @@ $mother = array(
     echo '<pre>';
     print_r($mother);
     echo '</pre>';
+
+    echo'<pre>';
+    print_r($mother['hobbies']); // simplement pour acceder a l arrazy
+
 ?>
