@@ -14,9 +14,14 @@ $pronouns = array ('i' , 'you' , 'he/she' , 'we' , 'you' ,'they');
 //var_dump($pronouns);
 foreach ($pronouns as $key => $value){      //same idem  //     foreach ($pronouns as pronoun){                       
         $pronouns[$key] = ucfirst($value);               //     echo ucfirst($pronoun . ' '.'code'. '<br/>' );
-    echo ucfirst($value . ' '.'code'. '<br/>' );         //         }
+    
+    if ($value !='he/she') {                                //         }
+        echo ucfirst($value . ' '.'code'. '<br>' );
+    }   
+    else { 
+    echo ucfirst($value . ' '.'codes'. '<br>' );
+    }  
 }
-
    
         
   
